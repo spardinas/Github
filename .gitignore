@@ -1,0 +1,114 @@
+start_vpn.bat
+stop_vpn.bat
+Bash/borrar ftp files.txt
+Bash/borrar_ftp_files.sh
+Bash/new 1.txt
+Bash/new 2.txt
+Bash/rasp_auto_update_cron.tex
+PI script/auto_update.sh
+PI script/backup.sh
+PI script/colores_basico.sh
+PI script/index.html
+PI script/inicio_noip.sh
+PI script/ip_public_telegram.sh
+PI script/picture.sh
+PI script/pictures_group_telegram.sh
+PI script/pictures_group_telegram.sh.save
+PI script/reinicio_telegram.sh
+PI script/temp.sh
+PI script/test_grupo_telegram.sh
+PI script/webserver.js
+PI script/logs/backup_log.txt
+PI script/logs/ip_telegram_log.txt
+PI script/logs/noip_log.txt
+PI script/logs/reinicio_log.txt
+PI script/logs/temp_log.txt
+Powershell/List_EndPointBackup.ps1
+Powershell/Log.ps1
+Powershell/Ping-server-list.ps1
+Powershell/powershell.zip
+Powershell/AD/cambia_pass_admin.ps1
+Powershell/AD/create_user_csv.ps1
+Powershell/AD/send_mail_classic.ps1
+Powershell/AD/create user + mail/config.json
+Powershell/AD/create user + mail/CreateADUser.ps1
+Powershell/AD/create user + mail/MailTemplateServiceDesk.html
+Powershell/AD/create user + mail/MailTemplateUserCreated.html
+Powershell/AD/create user + mail/Original/config.json
+Powershell/AD/create user + mail/Original/CreateADUser.ps1
+Powershell/AD/create user + mail/Original/MailTemplateServiceDesk.html
+Powershell/AD/create user + mail/Original/MailTemplateUserCreated.html
+Powershell/M365/AADGroupmembers.ps1
+Powershell/M365/AADGroupmembersNested.ps1
+Powershell/M365/distribution-group-member.ps1
+Powershell/M365/dl-members.ps1
+Powershell/M365/DL.ps1
+Powershell/M365/file.ps1
+Powershell/M365/Full-MFA-report.ps1
+Powershell/M365/get_last_logon-Entra.ps1
+Powershell/M365/get_mfa_status.ps1
+Powershell/M365/get-dl-and-members.ps1
+Powershell/M365/Get-IMAPAccessToken.ps1
+Powershell/M365/GetM365InactiveUserReport.ps1
+Powershell/M365/listmembers.ps1
+Powershell/M365/listmembers.txt
+Powershell/M365/M365UsersLastSuccessfulSigninReport.ps1
+Powershell/M365/MFA USERS PS.txt
+Powershell/M365/New-DL.ps1
+Powershell/M365/New-DL.txt
+Powershell/M365/test_mail.ps1
+Powershell/M365/Test-New-DL.txt
+Powershell/M365/users_mfa.ps1
+Powershell/M365/usersandmailboxes.ps1
+Powershell/Scripts_Crayon/DataCollectionShell.vbs
+Powershell/Scripts_Crayon/Get-Office365Users v1.ps1
+Powershell/Scripts_Crayon/HyperV_ToolV5.ps1
+Powershell/Scripts_Crayon/RVTools4.5.1.msi
+Powershell/Scripts_Crayon/Signin_Logs.csv
+Powershell/Scripts_Crayon/UserLicense_and_SignIn.log
+Powershell/Scripts_Crayon/UserLicenseReport.csv
+Powershell/Vmware/check_snapshot_vsphere.ps1
+Powershell/Vmware/create-network-cluster.ps1
+Powershell/Vmware/date_VM.ps1
+Powershell/Vmware/Get_Serial_Number_via_ESX.ps1
+Powershell/Vmware/Get_Serial_Number_via_iLO.ps1
+Powershell/Vmware/get-disk_vsphere.ps1
+Powershell/Vmware/Getting_Fan_temperature_Info.ps1
+Powershell/Vmware/Getting_Power_Info.ps1
+Powershell/Vmware/Getting_Server_Status.ps1
+Powershell/Vmware/List_Disk_VM.ps1
+Powershell/Vmware/list_snapshots_dtf-vcenter.ps1
+Powershell/Vmware/list_snapshots_ima-vcenter7.ps1
+Powershell/Vmware/list_snapshots_spc-vcenter.ps1
+Powershell/Vmware/List_VM_Thin.ps1
+Powershell/Vmware/netbox-api_fdn.ps1
+Powershell/Vmware/netbox-api_ima-vcenter.ps1
+Powershell/Vmware/nombre_igual_fqdn.ps1
+Powershell/Vmware/refresco_INT.ps1
+Powershell/Vmware/sessions.ps1
+Powershell/Vmware/Shutdown_Storage.ps1
+Powershell/Vmware/status_EMC.ps1
+Powershell/Vmware/TERMINAR_Add_user_to_iLO.ps1
+Powershell/Vmware/TERMINAR_Añadir_VLAN_a_ESX_Host.ps1
+Powershell/Vmware/Using_Find-HPiLO.ps1
+Powershell/Vmware/Using_Find-HPOA.ps1
+Powershell/Vmware/VM_Config_Changes__2.ps1
+Powershell/Vmware/VM_Config_Changes.ps1
+Powershell/Vmware/VM-Disk.ps1
+Powershell/Vmware/VMtools_AutoUpdate.ps1
+Powershell/Vmware/VMware.ps1
+Powershell/Vmware/vswitch.ps1
+Python/boton_apagado.py
+Python/new 1.py
+web/bocata/AWS SAM/comandos.txt
+web/bocata/AWS SAM/estructura del proyecto.txt
+web/bocata/AWS SAM/template.yaml
+web/bocata/AWS SAM/src/lambda_function.py
+web/bocata/No use/01.html
+web/bocata/No use/config.json
+web/bocata/No use/home_old.html
+web/bocata/No use/home.html
+web/bocata/No use/proto.html
+web/bocata/No use/recomended.html
+web/estoseacaba/contador.html
+web/pardinas/index.html
