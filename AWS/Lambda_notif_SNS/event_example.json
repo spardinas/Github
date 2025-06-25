@@ -1,0 +1,9 @@
+{
+  "Records": [
+    {
+      "Sns": {
+        "Message": "🚨 Ejemplo de alerta para enviar a Telegram"
+      }
+    }
+  ]
+}
