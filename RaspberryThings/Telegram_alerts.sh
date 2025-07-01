@@ -48,18 +48,17 @@ capture_and_send() {
     log "✅ Image from ${name} obtained."
     
     if curl -s -F "chat_id=${chat_id}" -F "document=@${output_file}" "${api_url}" > /dev/null; then
-      log "📤 image from ${name} sent."
-    else
-      log "⚠️ Error sending ${name} image."
-      send_alert "Error sending image from *${name}* to Telegram."
-      ((error_count++))
-    fi
-  else
-    log "❌ Error capturing ${name} image."
-    send_alert "Check *${name}* stream."
-    ((error_count++))
-  fi
-}
+  log "📤 Imagen de ${name} enviada correctamente."
+
+  # Eliminar la imagen local
+  rm -f "${output_file}" && log "🗑️ Imagen ${output_file} eliminada del disco."
+else
+  log "⚠️ Error al enviar imagen de ${name}."
+  send_alert "Error al enviar la imagen de *${name}* a Telegram."
+  ((error_count++))
+fi
+
+
 
 # Proccess cameras
 for cam in "${cameras[@]}"; do
@@ -74,3 +73,7 @@ if [[ $error_count -gt 0 ]]; then
 else
   log "✅ All of ${total_cameras} cameras proccesed correclty."
 fi
+
+# Clean up old ( +7 days) images
+find "${output_dir}" -type f -name "*.jpg" -mtime +7 -exec rm -f {} \; \
+  -exec echo "🧹 Old picture removed: {}" >> "$log_file" \;
