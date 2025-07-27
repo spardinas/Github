@@ -31,7 +31,7 @@ telegram-alert-template/
 - Conecta con [@BotFather](https://t.me/BotFather) en Telegram
 - Crea un bot y guarda el **TOKEN**
 - Inicia una conversación con el bot desde tu cuenta
-- Usa [este bot de terceros](https://t.me/userinfobot) o una petición como `https://api.telegram.org/bot<TOKEN>/getUpdates` para obtener tu `chat_id`
+- Usa una petición como `https://api.telegram.org/bot<TOKEN>/getUpdates` para obtener tu `chat_id`
 
 ### 2. Despliega la Lambda Notifier
 
