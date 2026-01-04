@@ -4,7 +4,7 @@ set -e
 
 FUNCTION_NAME="Lambda_function_name"  
 
-echo "📦 Empaquetando Lambda $FUNCTION_NAME..."
+echo "Empaquetando Lambda $FUNCTION_NAME..."
 
 # Limpiar cualquier build previo
 rm -rf build
@@ -28,4 +28,4 @@ aws lambda update-function-code \
   --function-name $FUNCTION_NAME \
   --zip-file fileb://lambda.zip
 
-echo "✅ ¡Lambda actualizada!"
+echo "¡Lambda actualizada!"
