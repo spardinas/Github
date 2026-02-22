@@ -1,0 +1,16 @@
+[
+  {
+    "id": "calle-santo-tome",
+    "nombre": "Calle Santo Tomé",
+    "leyenda": "Cuenta la tradición que en esta calle...",
+    "coords": [39.8568, -4.0245],
+    "imagen": "img/calles/santo-tome.jpg"
+  },
+  {
+    "id": "calle-del-angel",
+    "nombre": "Calle del Ángel",
+    "leyenda": "Se dice que un ángel apareció aquí...",
+    "coords": [39.8572, -4.0231],
+    "imagen": "img/calles/angel.jpg"
+  }
+]
