@@ -1,4 +1,4 @@
-# Sistema de Alertas vía Telegram usando AWS Lambda y SNS
+# Alert systems using Telegram and Lambda
 
 Este proyecto proporciona una plantilla lista para desplegar notificaciones automáticas a Telegram utilizando AWS Lambda y SNS. Incluye:
 
