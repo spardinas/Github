@@ -45,15 +45,15 @@ capture_and_send() {
   log "Capturing image from ${name}..."
 
   if ffmpeg -y -loglevel error -rtsp_transport tcp -i "${url}" -frames:v 1 -s ${resolution} "${output_file}"; then
-    log "✅ Image from ${name} obtained."
+    log "Image from ${name} obtained."
     
     if curl -s -F "chat_id=${chat_id}" -F "document=@${output_file}" "${api_url}" > /dev/null; then
-  log "📤 Imagen de ${name} enviada correctamente."
+  log "Image from ${name} sent correctly."
 
   # Eliminar la imagen local
-  rm -f "${output_file}" && log "🗑️ Imagen ${output_file} eliminada del disco."
+  rm -f "${output_file}" && log "Image ${output_file} deleted from disk."
 else
-  log "⚠️ Error al enviar imagen de ${name}."
+  log "Error sending image from ${name}."
   send_alert "Error al enviar la imagen de *${name}* a Telegram."
   ((error_count++))
 fi
@@ -69,11 +69,11 @@ done
 # Sending alert if an error occurred
 if [[ $error_count -gt 0 ]]; then
   send_alert "Summary: ${error_count} of ${total_cameras} camera(s) failed."
-  log "Summary: ${error_count}/${total_cameras} cowith errors."
+  log "Summary: ${error_count}/${total_cameras} cameras with errors."
 else
-  log "✅ All of ${total_cameras} cameras proccesed correclty."
+  log "All of ${total_cameras} cameras processed correctly."
 fi
 
 # Clean up old ( +7 days) images
 find "${output_dir}" -type f -name "*.jpg" -mtime +7 -exec rm -f {} \; \
-  -exec echo "🧹 Old picture removed: {}" >> "$log_file" \;
+  -exec echo "Old picture removed: {}" >> "$log_file" \;
