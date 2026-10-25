@@ -1,6 +1,6 @@
 """
 #
-# Este script crea un archivo pdf con un Paln de Seguridad basico.
+# Este script crea un archivo 
 #
 
 
@@ -8,6 +8,9 @@
 
 from email.mime import image
 
+from reportlab.platypus import SimpleDocTemplate, Paragraph, PageBreak
+from reportlab.lib.styles import getSampleStyleSheet
+from markdown import markdown
 from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import A4
 from reportlab.lib import colors
@@ -16,11 +19,11 @@ import os
 import sys
 
 
-output = "C:\\Path\\To\\plan_de_seguridad.pdf"
+output = "C:\\Path\\to\\plan_de_seguridad_largo.pdf"
 c = canvas.Canvas(output, pagesize=A4)
 
 form = c.acroForm
-
+for page_num in range(1, 4): 1 # Example: 5 pages
 # Título
 c.setFont("Helvetica-Bold", 18)
 c.drawString(50, 800, "Mi plan de seguridad")
@@ -37,17 +40,18 @@ c.drawString(50, 740, "112")
 c.setFont("Helvetica",10)
 c.drawString(50, 720, "Línea de atención a la conducta suicida")
 c.setFont("Helvetica-Bold",14)
-c.drawString(50, 700, "024") 
-c.drawImage("C:\\Path\\To\\phone.png", 200, 750 , width=25, height=25, mask='auto')
-c.drawImage("C:\\Path\\To\\phone.png", 250, 720 , width=25, height=25, mask='auto')
-
+c.drawString(50, 700, "024")
+c.drawImage("C:\\Path\\to\\phone.png", 200, 750 , width=25, height=25, mask='auto')
+c.drawImage("C:\\Path\\to\\phone.png", 250, 720 , width=25, height=25, mask='auto')
 # Set vertical line color and width
 c.setStrokeColor(colors.red)  
 c.setLineWidth(2)  # Thickness in points
+
 # Draw a vertical line from (x, y_start) to (x, y_end)
 x_position = 90  
 y_start = 700            # points from bottom
 y_end = 50     # points from bottom
+
 c.line(x_position, y_start, x_position, y_end)
 
 #Señales de alarma
@@ -87,7 +91,7 @@ form.textfield(
     borderStyle='inset', forceBorder=True,
     maxlen= 300
 )
-c.drawImage("C:\\Path\\To\\smartphone.png", 250, 530 , width=20, height=20, mask='auto')
+c.drawImage("C:\\Path\\to\\smartphone.png", 250, 530 , width=20, height=20, mask='auto')
 form.textfield(
     name='distraerme_telefono1',
     x=270, y=530, width=150, height=20,
@@ -100,7 +104,7 @@ form.textfield(
     borderStyle='inset', forceBorder=True,
     maxlen= 300
 )
-c.drawImage("C:\\Path\\To\\smartphone.png", 250, 500 , width=20, height=20, mask='auto')
+c.drawImage("C:\\Path\\to\\smartphone.png", 250, 500 , width=20, height=20, mask='auto')
 form.textfield(
     name='distraerme_telefono2',
     x=270, y=500, width=150, height=20,
@@ -113,7 +117,7 @@ form.textfield(
     borderStyle='inset', forceBorder=True,
     maxlen= 300
 )
-c.drawImage("C:\\Path\\To\\smartphone.png", 250, 470 , width=20, height=20, mask='auto')
+c.drawImage("C:\\Path\\to\\smartphone.png", 250, 470 , width=20, height=20, mask='auto')
 form.textfield(
     name='distraerme_telefono3',
     x=270, y=470, width=150, height=20,
@@ -127,40 +131,40 @@ c.drawString(100, 440, "Personas a las que puedo pedir ayuda:")
 c.setFont("Helvetica", 10)
 c.drawString(100, 430, "A amigos, a un familiar o a otra persona")
 form.textfield(
-    name='contactos',
+    name='personas',
     x=100, y=400, width=150, height=20,
     borderStyle='inset', forceBorder=True,
     maxlen= 300
 )
-c.drawImage("C:\\Path\\To\\smartphone.png", 250, 400 , width=20, height=20, mask='auto')
+c.drawImage("C:\\Path\\to\\smartphone.png", 250, 400 , width=20, height=20, mask='auto')
 form.textfield(
-    name='contacto_telefono3',
+    name='persona_telefono3',
     x=270, y=400, width=150, height=20,
     borderStyle='inset', forceBorder=True,
     maxlen= 300
 )
 form.textfield(
-    name='contactos2',
+    name='personas2',
     x=100, y=370, width=150, height=20,
     borderStyle='inset', forceBorder=True,
     maxlen= 300
 )
-c.drawImage("C:\\Path\\To\\smartphone.png", 250, 370 , width=20, height=20, mask='auto')
+c.drawImage("C:\\Path\\to\\smartphone.png", 250, 370 , width=20, height=20, mask='auto')
 form.textfield(
-    name='contacto_telefono2',
+    name='persona_telefono2',
     x=270, y=370, width=150, height=20,
     borderStyle='inset', forceBorder=True,
     maxlen= 300
 )
 form.textfield(
-    name='contactos3',
+    name='personas3',
     x=100, y=340, width=150, height=20,
     borderStyle='inset', forceBorder=True,
     maxlen= 300
 )
-c.drawImage("C:\\Path\\To\\smartphone.png", 250, 340 , width=20, height=20, mask='auto')
+c.drawImage("C:\\Path\\to\\smartphone.png", 250, 340 , width=20, height=20, mask='auto')
 form.textfield(
-    name='contacto_telefono3',
+    name='persona_telefono3',
     x=270, y=340, width=150, height=20,
     borderStyle='inset', forceBorder=True,
     maxlen= 300
@@ -170,40 +174,40 @@ form.textfield(
 c.setFont("Helvetica-Bold", 12)
 c.drawString(100, 300, "Profesionales a los que puedo pedir ayuda:")
 form.textfield(
-    name='profesionales4',
+    name='personas4',
     x=100, y=270, width=150, height=20,
     borderStyle='inset', forceBorder=True,
     maxlen= 300
 )
-c.drawImage("C:\\Path\\To\\smartphone.png", 250, 270 , width=20, height=20, mask='auto')
+c.drawImage("C:\\Path\\to\\smartphone.png", 250, 270 , width=20, height=20, mask='auto')
 form.textfield(
-    name='profesional_telefono3',
+    name='persona_telefono3',
     x=270, y=270, width=150, height=20,
     borderStyle='inset', forceBorder=True,
     maxlen= 300
 )
 form.textfield(
-    name='profesionales5',
+    name='personas5',
     x=100, y=240, width=150, height=20,
     borderStyle='inset', forceBorder=True,
     maxlen= 300
 )
-c.drawImage("C:\\Path\\To\\smartphone.png", 250, 240 , width=20, height=20, mask='auto')
+c.drawImage("C:\\Path\\to\\smartphone.png", 250, 240 , width=20, height=20, mask='auto')
 form.textfield(
-    name='profesional_telefono2',
+    name='persona_telefono3',
     x=270, y=240, width=150, height=20,
     borderStyle='inset', forceBorder=True,
     maxlen= 300
 )
 form.textfield(
-    name='profesionales6',
+    name='personas6',
     x=100, y=210, width=150, height=20,
     borderStyle='inset', forceBorder=True,
     maxlen= 300
 )
-c.drawImage("C:\\Path\\To\\smartphone.png", 250, 210 , width=20, height=20, mask='auto')
+c.drawImage("C:\\Path\\to\\smartphone.png", 250, 210 , width=20, height=20, mask='auto')
 form.textfield(
-    name='profesional_telefono3',
+    name='persona_telefono3',
     x=270, y=210, width=150, height=20,
     borderStyle='inset', forceBorder=True,
     maxlen= 300
@@ -233,6 +237,56 @@ form.textfield(
     maxlen= 300,
     fieldFlags= 'multiline'
 )
+
+c.showPage()
+
+with open(r"C:\\Path\\to\\alarma.md", encoding="utf-8") as f:
+    texto = f.read()
+
+y = 800
+
+for linea in texto.splitlines():
+    c.drawString(50, y, linea)
+    y -= 15
+
+    if y < 50:
+        c.showPage()
+        y = 800
+    
+    
+c.showPage()
+
+with open(r"C:\\Path\\to\\comunicacion.md", encoding="utf-8") as f:
+    texto = f.read()
+
+y = 800
+
+for linea in texto.splitlines():
+    c.drawString(50, y, linea)
+    y -= 15
+
+    if y < 50:
+        c.showPage()
+        y = 800
+    
+    
+c.showPage()
+
+with open(r"C:\\Path\\to\\mitos_a_desterrar.md", encoding="utf-8") as f:
+    texto = f.read()
+
+y = 800
+
+for linea in texto.splitlines():
+    c.drawString(50, y, linea)
+    y -= 15
+
+    if y < 50:
+        c.showPage()
+        y = 800
+    
+    
+c.showPage()
 
 c.save()
 
