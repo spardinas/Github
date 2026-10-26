@@ -23,7 +23,7 @@ output = "C:\\Path\\to\\plan_de_seguridad_largo.pdf"
 c = canvas.Canvas(output, pagesize=A4)
 
 form = c.acroForm
-for page_num in range(1, 4): 1 # Example: 5 pages
+for page_num in range(1, 4): 1 # Example: 4 pages
 # Título
 c.setFont("Helvetica-Bold", 18)
 c.drawString(50, 800, "Mi plan de seguridad")

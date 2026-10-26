@@ -13,3 +13,4 @@ Si tu u otra persona que conozcas crees que puede estar en riesgo, llama al tele
 ## En una primera fase ( actual ), el script crear un archivo de 1 página con la informacion que debes llevar encima.
 
 ***Revisa*** las rutas donde se crea el archivo y donde se encuantran los iconos ( formato *.png )
+*** Segunda version *** incluye un adendo para incluir ,como PDF multipagina , los archivos markdown existentes.
